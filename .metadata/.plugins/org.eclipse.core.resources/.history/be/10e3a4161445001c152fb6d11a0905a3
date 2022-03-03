@@ -1,0 +1,10 @@
+package com.vc.entity;
+
+public class Cart {
+	private int cartid;
+	private int prodid;
+	private int qty;
+	private Double total;
+	private Date purdate;
+	
+}

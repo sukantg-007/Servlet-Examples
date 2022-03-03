@@ -1,0 +1,11 @@
+package com.vc.entity;
+
+public class Product {
+	private int pid;
+	private String pname;
+	private String catagory;
+	private String summary;
+	private Double price;
+	private boolean isAvailable;
+	private String pimg_path;	
+}

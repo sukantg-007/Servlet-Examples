@@ -1,0 +1,8 @@
+package com.vc.entity;
+
+public class Customer {
+	private Integer custid;
+	private String custemail;
+	private String custpass;
+	
+}

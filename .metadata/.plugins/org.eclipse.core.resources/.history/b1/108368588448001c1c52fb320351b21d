@@ -1,0 +1,13 @@
+package com.vc.entity;
+
+import java.util.Date;
+import java.util.List;
+
+public class Order {
+	private Integer oid;
+	private Integer custid;
+	private Double total;
+	private Date odate;
+	private List<Product> list;	
+
+}

@@ -1,0 +1,10 @@
+package com.vc.service;
+
+import com.vc.entity.Product;
+
+public interface IProductService {
+	public String add(Product p);
+	public String update(Product p);
+	public String delete(Product p);	
+
+}

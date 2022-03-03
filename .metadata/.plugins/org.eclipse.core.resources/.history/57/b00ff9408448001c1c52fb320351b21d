@@ -1,0 +1,10 @@
+package com.vc.entity;
+
+public class Order {
+	private Integer oid;
+	private Integer custid;
+	private Double total;
+	private Date odate;
+	
+
+}

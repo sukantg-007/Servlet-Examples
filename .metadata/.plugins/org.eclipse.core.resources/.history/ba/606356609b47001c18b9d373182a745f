@@ -1,0 +1,55 @@
+package com.vc.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet("/first")
+public class FistServlet extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doPost(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		//getting request data
+		String eid=request.getParameter("eid");
+		String ename=request.getParameter("ename");
+		String esal = request.getParameter("esal");
+		String eaddr = request.getParameter("eaddr");
+		//creating session object
+		HttpSession session=request.getSession();
+		session.setAttribute("eid", eid);
+		session.setAttribute("ename",ename);	
+		session.setAttribute("esal", esal);
+		session.setAttribute("eaddr", eaddr);
+		//forwarding req to other page
+		//response.sendRedirect(response.encodeURL("./display.html"));
+//		RequestDispatcher dispatcher=getServletContext().getRequestDispatcher(response.encodeURL("/form2.html"));
+//		dispatcher.forward(request, response);
+		PrintWriter out=response.getWriter();
+		out.println("<form action='./display\ method='post'>\r\n" +
+				"            \r\n" + 
+				"                <div class=\"form-group d-flex\">                    \r\n" + 
+				"                    <label class=\"w-25\" for=\"exampleInputEmail1\">EDESG</label>\r\n" + 
+				"                    <input type=\"text\" name=\"edesg\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\"\r\n" + 
+				"                        placeholder=\"Enter EID\">      \r\n" + 
+				"                    \r\n" + 
+				"                </div>\r\n" + 
+				"                <div class=\"form-group d-flex\">\r\n" + 
+				"                    <label class=\"w-25\" for=\"exampleInputPassword1\">ELOCATION</label>\r\n" + 
+				"                    <input type=\"text\" name=\"eloc\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Enter Ename\">\r\n" + 
+				"                </div>                \r\n" + 
+				"                <button type=\"submit\" class=\"btn btn-primary\">Display</button>\r\n" + 
+				"            \r\n" + 
+				"        </form>");
+	}
+
+}

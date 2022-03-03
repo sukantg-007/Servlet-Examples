@@ -1,0 +1,26 @@
+div.container{
+    margin: auto;
+    width: 50%;
+    background-color: #334756;
+    border: 2px solid black;
+    box-shadow: 3px 3px 3px 2px #212121,6px 6px 5px 4px #F0A500;
+}
+label{
+    margin-bottom: 5px;
+    color: rgb(8, 238, 219);
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+.btn{
+    margin: 10px;
+    background-color: #F0A500;
+    text-transform: uppercase;
+}
+.btn:hover{
+    background: black;
+    color: white;    
+}
+div{
+    margin: 10px;
+}

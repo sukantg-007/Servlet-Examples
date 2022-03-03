@@ -1,0 +1,49 @@
+package com.vc.entity;
+
+import java.util.Date;
+import java.util.List;
+
+public class Order {
+	private Integer oid;
+	private Integer custid;
+	private Double total;
+	private Date odate;
+	private Date ddate;
+	private List<Product> list;
+	public Integer getOid() {
+		return oid;
+	}
+	public void setOid(Integer oid) {
+		this.oid = oid;
+	}
+	public Integer getCustid() {
+		return custid;
+	}
+	public void setCustid(Integer custid) {
+		this.custid = custid;
+	}
+	public Double getTotal() {
+		return total;
+	}
+	public void setTotal(Double total) {
+		this.total = total;
+	}
+	public Date getOdate() {
+		return odate;
+	}
+	public void setOdate(Date odate) {
+		this.odate = odate;
+	}
+	public Date getDdate() {
+		return ddate;
+	}
+	public void setDdate(Date ddate) {
+		this.ddate = ddate;
+	}
+	public List<Product> getList() {
+		return list;
+	}
+	public void setList(List<Product> list) {
+		this.list = list;
+	}	
+}

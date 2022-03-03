@@ -1,0 +1,12 @@
+package com.vc.factory;
+
+import com.vc.service.IProductService;
+
+public class ProductServiceFactory {
+	IProductService productService=null;
+	public IProductService getProductService()
+	{
+		productService=new ProductService();
+		return productService;
+	}
+}

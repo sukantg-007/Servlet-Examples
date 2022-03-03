@@ -1,0 +1,6 @@
+description.autobuilding=false
+description.disableLinking=false
+description.snapshotinterval=120000
+eclipse.preferences.version=1
+refresh.enabled=true
+version=1

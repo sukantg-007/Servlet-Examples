@@ -1,0 +1,35 @@
+package com.vc.service;
+
+import java.sql.Connection;
+
+import com.vc.entity.Product;
+import com.vc.factory.ConnectionFactory;
+
+public class ProductService implements IProductService{
+
+	private final String INSERT_PRODUCT_QUERY="INSERT INTO PRODUCTTB VALUES (PRODUCTTB_SEQ.NEXTVAL, ?, ?, ?, ?, ?, ?)";
+	private final String UPDATE_PRODUCT_QUERY="UPDATE PRODUCTTB SET PNAME=?, CATAGORY=?, PSUMMARY=?, PRICE=?, AVAILABLE=?, PIMG=? WHERE PID=?";
+	private final String DELETE_PRODUC_QUERY="DELETE FROM PRODUCTTB WHERE PID=?";
+	@Override
+	public String add(Product p) {
+		String status="";
+		try {
+			Connection con=ConnectionFactory.getConnection();
+		}catch(Exception e) {
+			
+		}
+	}
+
+	@Override
+	public String update(Product p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String delete(Product p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

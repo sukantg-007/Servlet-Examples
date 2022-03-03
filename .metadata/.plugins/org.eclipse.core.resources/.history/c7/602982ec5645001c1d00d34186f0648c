@@ -1,0 +1,46 @@
+package com.vc.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.vc.entity.Product;
+import com.vc.service.ProductService;
+
+@WebServlet("/addproduct")
+public class AddProductServlet extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doPost(request, response);
+	}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		
+		String pname=request.getParameter("pname");
+		String catagory=request.getParameter("catagory");
+		String summary=request.getParameter("psummary");
+		String price=request.getParameter("price");
+		String isavailable=request.getParameter("isavilable");
+		String pimg_path=request.getParameter("path");
+		Product p=new Product();
+		p.setPname(pname);
+		p.setCatagory(catagory);
+		p.setSummary(summary);
+		p.setPrice(Double.parseDouble(price));
+		p.setAvailable(isavailable.equals("yes")?true:false);
+		p.setPimg_path(pimg_path);
+		ProductService service=new ProductService();
+		String msg=service.add(p);
+		RequestDispatcher dispatcher=null;
+		if(msg.equals("success")) {
+			dispatcher=request.getRequestDispatcher("./showproduct.jsp");
+			dispatcher.forward(request, response);
+		}
+	}
+
+}

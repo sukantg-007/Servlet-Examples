@@ -1,0 +1,7 @@
+package com.vc.service;
+
+import com.vc.entity.Order;
+
+public interface IOrderService {
+	private String add(Order order);
+}

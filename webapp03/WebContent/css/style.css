@@ -1,0 +1,88 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.active{
+    background-color:lightcoral;
+    border-radius: 5px;    
+}
+nav{
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+.main{
+    min-height: 550px;
+}
+body{
+    width: 100%; height: 100vh;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+body>img{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;height: 100%;
+}
+.card-head{
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 27px;
+    color: white;
+    background-color: lightcoral;
+    width:50%;
+    margin: auto;
+    border-radius: 5px;
+}
+.border{
+    box-shadow: 3px 3px 0px 3px orange;
+}
+input[type=text], input[type="password"], input [type="number"]{
+    width: 70%;
+    height: 35px;
+    border-radius: 5px;
+    margin: 10px 0px;    
+}
+label{
+    width: 20%;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.button{     
+    margin: 15px;    
+    width: 30%;
+    height: 35px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.button:hover{
+    background-color: black;
+    color: white;
+    border: 1px solid rgb(2, 78, 78);
+   text-transform: uppercase;
+}
+.btngrp{
+    float:right;
+    width: 80%;
+}
+.radios{ 
+    cursor: pointer;
+}
+span{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px;
+}
+table{
+	width:70%;
+}
+.table-hover{
+    font-weight: bold;
+}

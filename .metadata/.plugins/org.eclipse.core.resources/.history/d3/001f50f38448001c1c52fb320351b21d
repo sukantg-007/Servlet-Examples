@@ -1,0 +1,5 @@
+package com.vc.service;
+
+public interface IOrderService {
+	private String add(Order order);
+}
